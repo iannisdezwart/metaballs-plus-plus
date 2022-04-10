@@ -1,6 +1,7 @@
-.PHONY: main
-main: main.cpp
-	g++ -o main main.cpp -Ofast -march=native -std=c++11 -lpthread -lSDL2
+SRC_FILES = $(wildcard *.cpp)
+LD_FLAGS  = -lpthread -lSDL2
+CXX_FLAGS = -Ofast -march=native -std=c++11
 
-debug: main.cpp
-	g++ -o main main.cpp -g -march=native -std=c++11 -lpthread -lSDL2
+.PHONY: main
+main: $(OBJ_FILES)
+	$(CXX) $(CXX_FLAGS) $(LD_FLAGS) -o main $(SRC_FILES)

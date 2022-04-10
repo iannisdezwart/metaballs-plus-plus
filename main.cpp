@@ -3,22 +3,11 @@
 #include <SDL2/SDL.h>
 #include <unistd.h>
 
-#define WIDTH 800
-#define HEIGHT 600
-#define N_BLOBS 10
-#define DELTA 0.1
-
-SDL_Window *window;
-SDL_Renderer *renderer;
-uint64_t frame_time;
-
+#include "globals.hpp"
 #include "timing.hpp"
 #include "rand.hpp"
 #include "blob.hpp"
 #include "frame.hpp"
-
-Frame frame(WIDTH, HEIGHT, N_BLOBS);
-
 #include "colour.hpp"
 #include "draw.hpp"
 #include "io.hpp"

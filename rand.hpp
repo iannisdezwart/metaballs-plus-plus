@@ -1,13 +1,16 @@
+#pragma once
+
+#include <bits/stdc++.h>
+
+#include "timing.hpp"
+
 /**
  * @brief Seeds the random number generator.
  * Seeding is done by calling `srand()` with the current time
  * in microseconds since UNIX epoch.
  */
 void
-seed_rng()
-{
-	srand(now());
-}
+seed_rng();
 
 /**
  * @brief Generates a random double floating point number in a given range.
@@ -16,8 +19,4 @@ seed_rng()
  * @returns A random double floating point number in the given range.
  */
 double
-rng(double min, double max)
-{
-	double random = (double) rand() / RAND_MAX;
-	return min + random * (max - min);
-}
+rng(double min, double max);
